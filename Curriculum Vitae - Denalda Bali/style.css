@@ -1,0 +1,1058 @@
+/*
+* Author: Denalda Bali 
+* Date: April 11, 2023 
+* HTML/CSS Source File for the purpose of this website is to showcase my professional and educational background
+*/
+
+/*
+* This CSS code sets basic styles for all elements in the web page
+*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Jost", sans-serif;
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+/*
+* This CSS code defines a set of custom CSS variables for consistent use of colors 
+* and font sizes throughout the web page.
+*/
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000;
+  --secound-color: #a09dab;
+  --main-color: #f75023;
+  --big-font: 5rem;
+  --h2-font: 3rem;
+  --p-font: 1.1rem;
+}
+
+/*
+* This CSS code sets the background and text color for the body element to the custom CSS 
+* variables defined in the :root selector, which provides consistent use of colors throughout the page.
+*/
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+/*
+* This CSS code sets the styling for the header element.
+*/
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  padding: 30px 18%;
+  transition: 0.3s;
+}
+.noimg img {
+  max-width: 100%;
+  width: 130px;
+  height: auto;
+}
+/*
+*  <!-------- Internal Hyperlink ---->
+* .navlist class is for styling the navigation menu list items.
+*/
+.navlist {
+  display: flex;
+}
+/*
+* .navlist li rule is for positioning the navigation menu items.
+*/
+.navlist li {
+  position: relative;
+}
+/*
+* .navlist a rule is for styling the anchor tags inside the navigation menu items.
+*  (set the distance between items)
+*/
+.navlist a {
+  font-size: var(--p-font);
+  color: var(--text-color);
+  font-weight: 500;
+  padding: 10px 27px;
+}
+/*
+* .navlist a::after rule is for creating an underline effect below the anchor tags.
+*/
+.navlist a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  background: var(--main-color);
+  bottom: -3px;
+  left: 0;
+  transition: ease 0.4s;
+}
+/*
+* .navlist a:hover::after rule is for animating the underline effect on hover.
+*/
+.navlist a:hover::after {
+  width: 100%;
+}
+/*
+*
+*/
+#menu-icon {
+  font-size: 35px;
+  color: var(--text-color);
+  z-index: 10001;
+  cursor: pointer;
+  display: none;
+}
+
+/*
+* .top-btn: CSS class for a button element in the page header.
+*/
+.top-btn {
+  position: relative;
+  display: inline-block;
+  padding: 9px 30px;
+  background: transparent;
+  color: var(--text-color);
+  letter-spacing: 1px;
+  font-size: var(--p-font);
+  font-weight: 500;
+  transition: ease 0.5s;
+}
+/*
+* .top-btn:after and .top-btn:before: pseudo elements used to create border effects on hover
+*/
+.top-btn:after,
+.top-btn:before {
+  content: "";
+  position: absolute;
+  padding: 9px 30px;
+  width: 0;
+  height: 0;
+  transition: all 0.4s, opacity 0.1s 0.4s;
+  opacity: 0;
+}
+.top-btn:after {
+  bottom: 0;
+  right: 0;
+  border-bottom: 1px solid #212121;
+  border-right: 1px solid var(--main-color);
+}
+.top-btn:before {
+  top: 0;
+  left: 0;
+  border-left: 1px solid #212121;
+  border-top: 1px solid var(--main-color);
+}
+.top-btn:hover:after,
+.top-btn:hover:before {
+  width: calc(100% + 15px);
+  height: calc(100% + 15px);
+  transition: 0.4s, opacity 0.1s;
+  opacity: 1;
+}
+/*
+* .heading: applies to the container element of the heading section
+*/
+.heading {
+  text-align: center;
+}
+/*
+* .heading h2: styles the main heading of the section
+*/
+.heading h2 {
+  font-size: var(--h2-font);
+  font-weight: 500;
+  margin: 7px 0px 20px;
+  line-height: 1.1;
+}
+/*
+* .heading h3: styles a subheading of the section
+*/
+.heading h3 {
+  color: var(--main-color);
+  font-size: 20px;
+  font-weight: 500;
+}
+/*
+* .heading p: styles any paragraphs within the section
+*/
+.heading p {
+  font-size: var(--p-font);
+  color: var(--secound-color);
+  line-height: 28px;
+}
+
+/*
+* This is a CSS rule for a HTML tag (section).
+*/
+section {
+  padding: 100px 18%;
+}
+/*
+*  <!-------- Profile ---->
+* .profile class sets up a section with a background image and a grid layout for its contents.
+*/
+.profile {
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  background-image: url(img/bgr.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  grid-gap: 4rem;
+}
+/*
+* .profile-text h1 class styles the main heading of the section.
+*/
+.profile-text h1 {
+  margin: 10px 0px 25px;
+  font-size: var(--big-font);
+  line-height: 1;
+  font-weight: 500;
+}
+/*
+* .profile-text h5 class styles a subheading of the section.
+*/
+.profile-text h5 {
+  margin-bottom: 23px;
+  font-size: 19px;
+  font-weight: 500;
+}
+/*
+* span selector sets the color of any span elements within the section to a specific color.
+*/
+span {
+  color: var(--main-color);
+}
+/*
+* .profile-text h3 class styles a secondary heading within the section.
+*/
+.profile-text h3 {
+  color: var(--main-color);
+  font-size: 20px;
+  font-weight: 500;
+}
+/*
+* .profile-text p class styles the paragraph text within the section.
+*/
+.profile-text p {
+  font-size: var(--p-font);
+  color: var(--secound-color);
+  line-height: 28px;
+  margin-bottom: 20px;
+}
+.profile-img img {
+  max-width: 100%;
+  width: 540px;
+  height: auto;
+}
+/*
+*  <!-------- External Hyperlink ---->
+* This css defines the anchor style in the "social" class
+*/
+.social a {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(128, 103, 240, 1);
+  font-size: 17px;
+  color: var(--bg-color);
+  margin-right: 22px;
+  margin-bottom: 30px;
+}
+/*
+* This CSS code applies a hover effect to social media icons. 
+*/
+.social a:hover {
+  transform: scale(1.1);
+  background: var(--main-color);
+  transition: 0.5s;
+}
+/*
+* header.sticky, styles a sticky header with a background color, padding, and box shadow.
+* (it is visible when we are scrolling down or up)
+*/
+header.sticky {
+  background: var(--bg-color);
+  padding: 13px 18%;
+  box-shadow: 0px 0px 10px rgb(0 0 0 /10%);
+}
+/*
+*  <!-------- Skills Class---->
+* .items styles a grid container with a dynamic number of columns, 
+* a gap between the items, and centered text alignment.
+*/
+.items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+  grid-gap: 2rem;
+  align-items: center;
+  text-align: center;
+}
+/*
+*  .sub-box styles a clickable box with padding, a transition effect, and a cursor pointer.
+*/
+.sub-box {
+  padding: 45px 44px 45px 45px;
+  transition: ease 0.5s;
+  cursor: pointer;
+}
+/*
+* .sub-img styles an image container with a maximum width, auto height, and a bottom margin.
+*/
+.sub-img img {
+  max-width: 100%;
+  width: 60px;
+  height: auto;
+  margin-bottom: 20px;
+}
+/*
+* .sub-box h3 styles a heading with a bottom margin, font size, and font weight.
+*/
+.sub-box h3 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 500;
+}
+/*
+* .sub-box p styles a paragraph with a font size, text color, and line height.
+*/
+.sub-box p {
+  font-size: var(--p-font);
+  color: var(--secound-color);
+  line-height: 29px;
+}
+/*
+* .sub-box:hover styles the sub-box when it is hovered over with a background 
+* color, box shadow, border radius, and a 3D transformation.
+*/
+.sub-box:hover {
+  background: #ffffff;
+  box-shadow: 18px 0px 87px 0px rgb(10 15 79 /7%);
+  border-radius: 12px;
+  will-change: transform;
+  transform: perspective(1000px) rotateX(4.8deg) rotateY(10.23deg)
+    scale3d(1.05, 1.05, 1, 05);
+}
+/*
+*  <!-------- Education ---->
+* .education: This class defines the style for a container element related to 
+* the education section on the web page.
+*/
+.education {
+  min-height: 100vh;
+  background: url(img/bgr.jpg) center / cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*
+* .education-table: This class defines the style for a table element inside the education section.
+*/
+.education h2 {
+  font-size: var(--h2-font);
+  font-weight: 500;
+  margin: 8px 0px 25px;
+  line-height: 1.1;
+}
+/*
+* main.education-table class: creates the main background of the table
+*/
+main.education-table {
+  width: 82vw;
+  height: 90vh;
+  background-color: #fff5;
+
+  backdrop-filter: blur(7px);
+  box-shadow: 0 0.4rem 0.8rem #0005;
+  border-radius: 0.8rem;
+
+  overflow: hidden;
+}
+/*
+* .education-table-header: This class defines the style for the header section of the table.
+*/
+.education-table-header {
+  width: 100%;
+  height: 10%;
+  background-color: #fff4;
+  padding: 0.8rem 1rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/*
+*education-table-header .input-group: This class defines the style for an 
+* input group element inside the table header.
+*/
+.education-table-header .input-group {
+  width: 35%;
+  height: 100%;
+  background-color: #fff5;
+  padding: 0 0.8rem;
+  border-radius: 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: 0.2s;
+}
+.education-table-header .input-group:hover {
+  width: 45%;
+  background-color: #fff8;
+  box-shadow: 0 0.1rem 0.4rem #0002;
+}
+/*
+* .education-table-header .input-group img: adjusts image parameters
+*/
+.education-table-header .input-group img {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+.education-table-header .input-group input {
+  width: 100%;
+  padding: 0 0.5rem 0 0.3rem;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+/*
+* .education-table-boody: This class defines the style for the body section of the table.
+*/
+.education-table-boody {
+  width: 95%;
+  max-height: calc(89% - 1.6rem);
+  background-color: #fffb;
+
+  margin: 0.8rem auto;
+  border-radius: 0.6rem;
+
+  overflow: auto;
+  overflow: overlay;
+}
+/*
+* if we have many added values in the table, we design the scrollbar here
+*/
+.education-table-boody::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+.education-table-boody::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem;
+  background-color: #0004;
+  visibility: hidden;
+}
+.education-table-boody:hover::-webkit-scrollbar-thumb {
+  visibility: visible;
+}
+/*
+* This class defines the style for a table element.
+*/
+table {
+  width: 100%;
+}
+/*
+* td: This class defines the style for a table data cell element.
+*/
+td img {
+  width: 36px;
+  height: 36px;
+  margin-right: 0.5rem;
+  border-radius: 50%;
+
+  vertical-align: middle;
+}
+table,
+th,
+td {
+  border-collapse: collapse;
+  padding: 1rem;
+  text-align: left;
+}
+/*
+* thead: This class defines the style for the table header section.
+*/
+thead th {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: #d5d1defe;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+/*
+* tbody: This class defines the style for the table body section.
+* (even values have this color)
+*/
+tbody tr:nth-child(even) {
+  background-color: #0000000b;
+}
+tbody tr {
+  --delay: 0.1s;
+  transition: 0.5s ease-in-out var(--delay), background-color 0s;
+}
+tbody tr.hide {
+  opacity: 0;
+  transform: translateX(100%);
+}
+tbody tr:hover {
+  background-color: #fff6 !important;
+}
+
+/*
+*  <!-------- Hobbies ---->
+* .hobbies-content: This is a class for a container element that will hold the hobby content.
+*/
+
+.hobbies-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+  grid-gap: 2rem;
+  align-items: center;
+  margin-top: 5rem;
+  text-align: center;
+  cursor: pointer;
+}
+/*
+* .col: This is a class for each grid cell element.
+*/
+.col {
+  position: relative;
+}
+/*
+* .col img: This is a class for the image element within each grid cell.
+*/
+.col img {
+  max-width: 100%;
+  width: 350px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+}
+/*
+* .layer: This is a class for the overlay layer element that appears on top of the image when it is hovered.
+*/
+.layer {
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 12px;
+  transition: all 0.4s;
+}
+/*
+* .layer:hover: This pseudo-class targets the overlay layer element when it is being hovered.
+*/
+.layer:hover {
+  background: linear-gradient(rgba(0, 0, 0, 0.5) 0%, #191919);
+}
+/*
+* .layer h3: This is a class for the h3 heading element within the overlay layer.
+*/
+.layer h3 {
+  position: absolute;
+  width: 100%;
+  font-size: 25px;
+  font-weight: 500;
+  color: var(--bg-color);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: all 0.4s;
+}
+/*
+* This CSS code sets the style for an <h3> element inside an element with 
+* the class "layer" when it is hovered over with the mouse. 
+*/
+.layer:hover h3 {
+  bottom: 52%;
+  opacity: 1;
+}
+.layer h5 {
+  position: absolute;
+  width: 100%;
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--bg-color);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: all 0.4s;
+}
+.layer:hover h5 {
+  bottom: 48%;
+  opacity: 1;
+}
+
+/*
+* <!-------- Portfolio ---->
+* .portfolio-content class sets up a grid layout for the portfolio items.
+*/
+.portfolio-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, auto));
+  grid-gap: 2rem;
+  align-items: center;
+  margin-top: 5rem;
+}
+/*
+* Each portfolio item is contained within a .row class. 
+* These items have a white background color and a box shadow, giving them a card-like appearance. 
+*/
+.row {
+  background: #ffffff;
+  box-shadow: 18px 0px 87px 0px rgb(10 15 70 / 7%);
+  border-radius: 12px;
+  padding: 45px 45px 45px 45px;
+  transition: ease 0.45s;
+  cursor: pointer;
+}
+/*
+* Each portfolio item has an image, contained within an .s class. 
+* These images have a circular shape with a solid background color
+*/
+.s img {
+  height: 65px;
+  width: 65px;
+  background: #f75124;
+  padding: 15px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+/*
+* set icon background
+*/
+.s.s-tow img {
+  background: #baebcd;
+}
+.s.s-three img {
+  background: #d9d1fa;
+}
+.s.s-four img {
+  background: #faedce;
+}
+.s.s-five img {
+  background: #f5cefa;
+}
+.s.s-six img {
+  background: #e0face;
+}
+/*
+* .row h3 and .row h5 classes set the font size, font weight, 
+* and margin of the item's title and subtitle, respectively.
+*/
+.row h3 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+.row h5 {
+  font-size: 17px;
+  font-weight: 500;
+  margin-bottom: 19px;
+}
+/*
+* .row p class sets the font size, font color, and line height of the item's description.
+*/
+.row p {
+  font-size: var(--p-font);
+  color: var(--secound-color);
+  line-height: 28px;
+}
+/*
+* .row:hover pseudo-class adds an animation effect when hovering over an item.
+*/
+.row:hover {
+  will-change: transform;
+  transform: perspective(1000px) rotateX(4.8deg) rotateY(10.23deg)
+    scale3d(1.05, 1.05, 1.05);
+}
+/*
+* <!-------- Language ---->
+*.lang-box: designs the position of the language boxes in the grid view
+*/
+.lang-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+  grid-gap: 2rem;
+  align-items: center;
+  margin-top: 5rem;
+  text-align: center;
+}
+/*
+* .wrap: designs the shape of the box
+*/
+.wrap {
+  background: #ffffff;
+  box-shadow: 18px 0px 87px 0px rgb(10 15 70 / 7%);
+  border-radius: 12px;
+  padding: 50px 50px 50px 50px;
+  transition: ease 0.4s;
+  cursor: pointer;
+}
+/*
+* .one: is a class selector for an HTML element that represents the first item in the list of languages.
+*/
+.one {
+  background: #baebcd;
+}
+/*
+* .two: is a class selector for an HTML element that represents the second item in the list of languages.
+*/
+.two {
+  background: #d9d1fa;
+}
+/*
+* .three: is a class selector for an HTML element that represents the third item in the list of languages.
+*/
+.three {
+  background: #faedce;
+}
+/*
+* styles the <h3> tag inside the .wrap class
+*/
+.wrap h3 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+/*
+* styles the <p> tag inside the .wrap class
+*/
+.wrap p {
+  font-size: var(--p-font);
+}
+/*
+*  <!-------- Details ---->
+* .container class is used to center the content of the page and create a flex container.
+*/
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+/*
+* .details-info class is a child of .container and is used to create a column layout.
+*/
+.container .details-info {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+/*
+* The .box class is a child of .details-info and is used to 
+* create a container for each item in the details section.
+*/
+.container .details-info .box {
+  position: relative;
+  padding: 20px 0;
+  display: flex;
+}
+/*
+* .icon class is a child of .box and is used to create a circular icon for each item.
+*/
+.container .details-info .box .icon {
+  min-width: 35px;
+  height: 35px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 22px;
+}
+/*
+* The .text class is a child of .box and is used to create a container for the text of each item.
+*/
+.container .details-info .box .text {
+  display: flex;
+  margin-left: 20px;
+  font-size: 16px;
+  color: #fff;
+  flex-direction: column;
+  font-weight: 300;
+}
+/*
+* .text h3 class is used to style the heading of each item in the details section.
+*/
+.container .details-info .box .text h3 {
+  font-weight: 500;
+  color: #00bcd4;
+  display: flex;
+}
+/*
+* .contact-info class is used to create a grid layout for the contact information section.
+*/
+.contact-info {
+  max-width: 850px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: transparent;
+}
+/*
+* .details class is used to style the details section. 
+*/
+.details {
+  background: #8067f0eb;
+  width: 64%;
+  margin: 100px auto;
+  padding: 70px 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 12px;
+  background-image: url(img/intro.png);
+  background-size: cover;
+}
+/*
+* .center h3 class is used to style the heading of the details section.
+*/
+.center h3 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 3px;
+  color: var(--bg-color);
+}
+/*
+* .center p selector is targeting a paragraph element that is a child of an element with the class center
+*/
+.center p {
+  font-size: var(--p-font);
+  color: var(--bg-color);
+  line-height: 26px;
+  margin-bottom: 25px;
+}
+/*
+* designs the field class which are for the textfield (name, email)
+*/
+.field {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  outline: none;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border: 2px solid rgba(0, 0, 0, 0);
+  margin-bottom: 22px;
+  transition: 0.3s;
+}
+/*
+* .field:hover selector targets the same element when the user hovers over it 
+* and sets the background color to a black with an alpha value of 0.1.
+*/
+.field:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+/*
+* .field:focus selector targets the same element when it is in focus and sets the background color 
+* to white and border to 2px solid with an RGBA value of 30, 85, 250, and 0.47.
+* (this happens when we put the value in the textfield)
+*/
+.field:focus {
+  background-color: #fff;
+  border: 2px solid rgba(30, 85, 250, 0.47);
+}
+/*
+* designs the field area class which are for the textfield (for message box)
+*/
+.area {
+  min-height: 100px;
+}
+/*
+* designs the submit button
+*/
+.submit {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  background-color: var(--main-color);
+  cursor: pointer;
+  outline: none;
+  border: none;
+  color: var(--bg-color);
+  transition: 0.3s;
+}
+/*
+* when the user hovers over button it sets the background color to #00bcd4.
+*/
+.submit:hover {
+  background-color: #00bcd4;
+}
+/*
+* !-------- Ends ---->
+* .ends selector defines the text alignment and padding for the end section
+*/
+.ends {
+  text-align: center;
+  padding: 40px;
+}
+/*
+* .ends p selector defines the font size and letter spacing for the text within that section.
+*/
+.ends p {
+  font-size: var(--p-font);
+  letter-spacing: 1px;
+}
+
+/*
+? when the webpage is viewed on a smaller screen or a mobile device 
+? the details-info info will be dispalyed above contact-info 
+TODO: It doesn't work.. yet!!!
+*/
+
+@media screen and (max-width: 880px) {
+  .contact-info {
+    grid-template-columns: 1fr;
+  }
+  .details-info {
+    height: 200px;
+  }
+}
+
+/*
+* Defines how the layout and styling of a webpage should change when the screen width is 1425 pixels or less 
+* (i.e., when the webpage is viewed on a smaller screen or a mobile device).
+*/
+
+@media (max-width: 1425px) {
+  header {
+    padding: 16px 3%;
+    transition: 0.3s;
+  }
+  header.sticky {
+    padding: 10px 3%;
+    transition: 0.3s;
+  }
+  section {
+    padding: 70px 3%;
+    transition: 0.3s;
+  }
+  .details {
+    width: 95%;
+    transition: 0.3s;
+  }
+  :root {
+    --big-font: 4rem;
+    --h2-font: 2.3rem;
+    --p-font: 1rem;
+    transition: 0.3s;
+  }
+}
+
+/*
+* 
+*Defines how the layout and styling of a webpage should change when the screen width is 970 pixels or less
+*This causes the menu icon to become visible on small screens.
+*/
+
+@media (max-width: 970px) {
+  #menu-icon {
+    display: block;
+  }
+  .profile {
+    min-height: 80vh;
+  }
+  .navlist {
+    position: absolute;
+    top: -600px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: var(--main-color);
+    text-align: right;
+    transition: all 0.4s;
+  }
+  .navlist a {
+    display: block;
+    padding: 1.2rem;
+    margin: 1.5rem;
+    border-right: 2px solid var(--bg-color);
+    color: var(--bg-color);
+  }
+  .navlist a:hover {
+    background: var(--bg-color);
+    color: var(--main-color);
+  }
+  .navlist a::after {
+    display: none;
+  }
+  .navlist.active {
+    top: 100%;
+  }
+}
+/*
+* Represents a media query for screens with a maximum width of 800px. 
+* It is used to change the layout and styles of the webpage when viewed on smaller screens 
+* such as mobile devices.
+*/
+@media (max-width: 800px) {
+  .profile {
+    grid-template-columns: 1fr;
+    min-height: 130vh;
+    grid-gap: 1rem;
+  }
+  .profile-text {
+    padding-top: 55px;
+  }
+  .profile-img {
+    text-align: center;
+  }
+  .profile-img img {
+    width: 440px;
+    height: auto;
+  }
+  .about {
+    grid-template-columns: 1fr;
+  }
+  .about-img {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  :root {
+    --big-font: 3.4rem;
+    --h2-font: 2rem;
+  }
+  section {
+    padding: 65px 3%;
+    transition: 0.3s;
+  }
+}
+/*
+* Represents a media query for screens with a maximum width of 540px. 
+* It is used to change the styling of the input field for email addresses in a form on the webpage when 
+* viewed on smaller screens such as mobile devices.
+*/
+@media (max-width: 540px) {
+  .field {
+    width: 310px;
+  }
+  .area {
+    width: 310px;
+  }
+}
