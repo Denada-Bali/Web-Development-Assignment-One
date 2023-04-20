@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Table-less CSS</title>
+    <style>
+      .container {
+        border: 2px solid black;
+        padding: 5px;
+      }
+
+      .header {
+        border: 2px solid blue;
+        text-align: center;
+        margin: 2px;
+        height: 150%;
+      }
+
+      .content {
+        display: flex;
+        flex-direction: row;
+        padding: 2px;
+      }
+
+      .sidebar {
+        border: 2px solid green;
+        padding: 10px;
+        margin: 2px;
+        width: 20%;
+        height: 400px;
+      }
+
+      .main {
+        border: 2px solid red;
+        width: 80%;
+        padding: 10px;
+        margin: 2px;
+        height: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div width="150%" class="header">
+        <h1>Header</h1>
+      </div>
+      <div class="content">
+        <div class="sidebar">
+          <h2>Sidebar</h2>
+          <p></p>
+        </div>
+        <div class="main">
+          <h2>Main Content</h2>
+          <p></p>
+          <p width="80%" height="100%"></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
